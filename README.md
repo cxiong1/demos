@@ -24,4 +24,4 @@ This repository contains a Panorama Stitching program. The program takes in seve
 they are all viewable from one frame. It does so by comparing the corners in each picture to determine an estimated offset from 
 one picture to another. Once it has compared anough corners, a mapping is created for the entire photo. Each pixel is passed 
 through the mapping. The end result is a composited image which contains both of the preceeding images layered ontop of one another.
-** Examples can be found in the /computer_vision/report.pdf file **
+**Examples can be found in the /computer_vision/report.pdf file**
