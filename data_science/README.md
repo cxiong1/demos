@@ -7,4 +7,9 @@ These are the Baltimore Crime Map and League of Legends Matchups. Both of the pr
 notebook but I have converted them to html format for ease of viewing.
 
 For ease of access, I have utilized github's html preview and appended my files so you can visit them directly.
+
+#### Baltimore Crime Map
+https://htmlpreview.github.io/?https://github.com/cxiong1/demos/blob/master/data_science/Baltimore_Crime_Map.html
+
+#### League of Legends Matchup
 https://htmlpreview.github.io/?https://github.com/cxiong1/demos/blob/master/data_science/League_Of_Legends_Matchup.html
