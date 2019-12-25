@@ -20,7 +20,7 @@ in a loop and takes input from the user through the console/command line. It is 
 and executed until the process is forced close/halted, or if the user exits the program themselves. 
 
 ### Computer Vision
-This repository contains a Panorama Stitching program. The program takes in several images and attempts to stitch them together so that
+This repository contains a Panorama Stitching program. This program was written using MATLAB The program takes in several images and attempts to stitch them together so that
 they are all viewable from one frame. It does so by comparing the corners in each picture to determine an estimated offset from 
 one picture to another. Once it has compared anough corners, a mapping is created for the entire photo. Each pixel is passed 
 through the mapping. The end result is a composited image which contains both of the preceeding images layered ontop of one another.
