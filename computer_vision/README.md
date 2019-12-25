@@ -43,6 +43,6 @@ The program takes input in the form of two images. As stated the program works o
  
  ### Final result
  
- For a more visual result, you can check the bottom of the report.pdf. It lists several images that have been stitched together using
+ For a more visual result, you can check the bottom of the **report.pdf**. It lists several images that have been stitched together using
  the above method and program. The input images can be found in the /test/ folders. The input folder serves as the input for the 
  program, i.e. the two images placed in the input folder will be stitched together.
