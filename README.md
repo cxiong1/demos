@@ -15,9 +15,9 @@ them into an html file for ease of access and viewability.
 
 ### Computer and Network security
 This repository contains the Gradebook program. This project is a command line program written in C. The Gradebook project is 
-a basic program that simulates a program used by teacher/professors. As such, it is a fully built shell type program which executes
-in a loop and takes input from the user through the console/command line. Functions will be continously read and executed until
-the process is forced close/halted, or if the user exits the program themselves. 
+a basic program that simulates a program used by teacher/professors. It is a fully built shell type program which executes
+in a loop and takes input from the user through the console/command line. It is capable of receiving and storing data (classes, students, grades, etc.) from the user and accessing it at a later time, it uses File I/O as its main storage. Functions will be continously read
+and executed until the process is forced close/halted, or if the user exits the program themselves. 
 
 ### Computer Vision
 This repository contains a Panorama Stitching program. The program takes in several images and attempts to stitch them together so that
