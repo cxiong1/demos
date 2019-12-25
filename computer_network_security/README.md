@@ -4,7 +4,7 @@ This repository contains the Gradebook program. This is a basic command line pro
 
 The relevant files are found through the /buildit-21-master/build filepath. 
 
-These are the 'admin.c' 'gradebook.c' 'student.c' and 'teacher.c' files. 
+### These are the 'admin.c' 'gradebook.c' 'student.c' and 'teacher.c' files. 
 
 The overall goal of this project was to construct a program that takes in user input but to ensure that it was impenetrable to attacks such as buffer overflows. 
 
