@@ -8,7 +8,7 @@ notebook but I have converted them to html format for ease of viewing.
 
 For ease of access, I have utilized github's html preview and appended my files so you can visit them directly.
 
-####Please note, I utilized a tool called nbconvert which automatically converts .ipynb files to .html. I want to clarify that 
+#### Please note, I utilized a tool called nbconvert which automatically converts .ipynb files to .html. I want to clarify that 
 these html files are not indicative of my html/css/javascript skills.
 
 ### Baltimore Crime Map
