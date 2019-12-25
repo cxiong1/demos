@@ -1,0 +1,1 @@
+Our break takes advantage of a vulnerability in verifiying the admin credentials; the program does not provide a secure check that terminates the program when a credential of invalid length is passed in by the user.

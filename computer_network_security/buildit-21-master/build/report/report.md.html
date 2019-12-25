@@ -1,0 +1,69 @@
+**CMSC414 Build-it Report - Group 21**
+
+# Overview
+
+For our implementation of the project we had mostly kept in line with the starter files we were provided. Initially we created these files as specified:<br>
+-administration.txt - Stores the adminstrator credential<br>
+-classes.bin - Stores the list of all classes with their teachers, id's, as well as students and their grades.<br>
+-login.bin - Stores the id's of both students and teachers with their corresponding login information.<br>
+
+In data/private we added the following files:<br>
+-courses.txt - Contains a list of all courses and their descriptions.<br>
+-login_all_id.txt - Contains a list of all login IDs, the user's name, their password, and user type.<br>
+-login_last_id.txt - Contains the last login that was created. <br>
+-second.txt - It is used to help insert students into the courses file.<br>
+-keys.txt - It contains the key and IV. <br>
+-cipherLen.txt -Length of the key (32). <br>
+
+When running the program we primarily created buffers to contain information needed for commands, tasks, login information, and all other necessary information. The values inside these buffers would then be used in comparision to the values listed in our data files to not only verify information, but to also track every new command being run.
+
+A brief summary of how our program runs is as follows. We have the administrator login and verify their credentials and if the credential is approved the administrator can create teachers or students (Each created user will have a user type identifying them within the system; 1=Student, 2= Teacher). From there any valid student or teacher that has been created can access the system. Both teachers and students have a special set of functions that they can run. The validity of each command run is checked through the system via multiple validation functions. Once an input or command is registered as valid, our system pulls up our encrypted files and decrypts them and then parse them for the necessary information we need to complete each command. Files are then updated and encrypted once again. The system continues to process until closed. A few general security measures we have placed was to track login attempts, limit amount of data read from user input, verify validity of all data being passed, allocate memory only as needed, restrict valid acceptable values for commands, and securing files via encryption.
+
+# Security
+
+The following section details what we determined as possible vulnerabilities that an attacker may take advantage of in order to break our code and attack our system. For every attack listed below, we have provided information on how the attacker may attempt to use security exploits to implement their aforementioned attack. We also have provided information on our pre-emptive defensive measures to block and defend against potential attacks. 
+
+<b>1) Brute Force Attacks</b>
+
+*Attack:* Attackers in our system may attempt to gain access to the accounts of the administrators, teachers, or students without having the proper credentials. They can do so by spamming a litany of possible usernames and credentials until they find the correct one in order to gain access into the system.
+
+*Defense:* We fight against these brute force attacks by limiting the amount of attempts a user has to login to the system or to enter the correct adminstration credentials. After 3 invalid attempts to enter the administrator credentials the credentials will be reset to a value only the administator can view in Administration.txt. And in the case of too many invalid attempts on a student or teacher account, the system will lock the the account untill the admin unlocks it. This defnse can be seen in admin.c in the admin_loop().
+
+<b>2) Buffer Overflow</b> <br>
+
+*Attack:* One of the most frequent weaknesses an attacker can exploit are a buffer overflows. We have many buffers set to handle user input and read user generated commands. These buffers read from the standard input and store the user provided information into the buffer. However, an attacker can take advantage of this information and overflow a buffer with information until it starts to write over other areas of memory. After which the attacker can inject their malicious code into our program.
+
+*Defense:* To defend against these buffer overflows our system has limited the amount of data a buffer will read from the user input, validify the data being passed in from the user, and only compare the predetermined limited amount of characters using strncmp and only fgets a certain amount of characters when reading from files. With these defensive measures all attempts at buffer overflows are squashed. This defense can be seen in utils.c in vprompt().
+
+<b>3) Integer Overflow/ Wrap around </b><br>
+
+*Attack:* In our system the attacker could use a teacher's credentials and attempt to assign a student a negative number as a grade. In doing so they would wrap around the value to a a high positive value, compromising the integrity of our grading system. 
+
+*Defense:* In order to fight against this attack we have ensured that any grades provided to a student by a teacher must be within the scale of 0-100. Securing the integrity of our system and preventing this type of attack. This defense can be seen in teacher.c in teacher_loop().
+
+<b>4) Format String Vulnerabilities</b><br>
+
+*Attack:* Given that the attacker has our source code they can look for any unformatted 'printfs' to exploit a format string vulnerability. The attacker could use an unformatted printf statement to list format strings to trick the system to print information off the stack and execute code. The attacker could use this information for further attacks.
+
+*Defense:* In order to defend against format string vulnerabilities we had chosen to implement any format string as part of our program and not as user input. We also made sure to format all our print statements with the proper format strings we want our output to contain. This will ensure that the attacker could not take advantage of any unformatted strings. This defense can be seen in every printf statement in every file in our code.
+
+<b>5) Dictionary Attack</b> <br> 
+
+*Attack:* In the case that we hashed all of our user's passwords and stored these hashes in login.bin, an attacker could still try to gain admission to an admin, teacher, or student account in the following way. Very heavy and large set lists containing the hashes of commonly used passwords, and standard variations of those passwords, are published and made readily available to the public. An attacker could potentially check the hashed passwords of our users in login.bin (assuming we hashed and stored the passwords in login.bin) against the hashes in these public 'dictionary' files. IF they find a match, then they have also found the password that corresponds to that hash. The attacker would then attempt to login to all user accounts until he/she is successful.
+
+*Defense:* Although a dictionary attack is used as a counterattack to the "hash passwords and store results" defense, we can still easily defend against the dictionary attack in the following way. Instead of encrypting the passwords and storing the hashed values in login.bin, we encrypt the entire file itself and store the hash of the entire file so that they cannot compare the hashed passwords of our users against the hashed passwords in the 'dictionaries'. To accomplish this we designed some functions, based off the openssl library, to encrypt and decrypt our files. These functions can be found at the bottom of utils.c. Also, it is worth mentioning that we are using aes-cbc-256 and storing the private key and iv values in data/private/keys.txt.
+
+<b>6) Improper Data Modification</b> <br>
+
+*Attack:* The attacker may take advantage of the provided user data and try to add their own information or tamper with files. They could tamper with files to change passwords and lock users or provide improper data. 
+
+*Defense:* In order to prevent the attacker from breaking the integrity of our data we have selected to encrypt our files with a special hash function. We have encrypted the entire file with our private key so the attackers will be unable to violate the data within the files. Whenver we have to edit the files ourselves we decrypt the entire file then add our data, then immediately encrypt the file once again. Perserving the sanctity of our data.
+
+
+
+
+<!--- 
+  Markdeep library, no need to modify
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="resources/jquery.min.js"></script>
