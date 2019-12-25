@@ -10,7 +10,8 @@ The overall goal of this project was to construct a program that takes in user i
 
 ## Program execution
 
-The program follows a login type architecture.
+The program follows a shell type architecture, where upon execution, it prompts the user for input. It continously asks for input until
+the program forced closed or if the user exits the program themselves.
 
 There are two types of users for this program, teachers and students. These permissions are designated at the time of account creation.
 A new account can only be created by an administrator. This event occurs at the start of execution, before it prompts the user for their 
