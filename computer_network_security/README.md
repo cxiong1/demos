@@ -22,7 +22,7 @@ This is a 32 character string stored in a textfile which only administrators sho
 exists on startup. If the file exists, it retrieves the credential key, if it doesn't, it randomly generates the 32 characters and 
 writes it to the textfile.
 
-It follows standard username/password storing practices, salting and hashing, and comparing if supplied passwords
+It follows standard username/password storing practices, comparing if supplied passwords
 matches the stored one in the "database". In this instance, all of the storage done by the program is stored to textfiles locally on the 
 hard drive. 
 
