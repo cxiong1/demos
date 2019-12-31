@@ -26,6 +26,11 @@ It follows standard username/password storing practices, comparing if supplied p
 matches the stored one in the "database". In this instance, all of the storage done by the program is stored to textfiles locally on the 
 hard drive. 
 
+Much of the validity checking and sanitization of inputs occurs in 'utils.c' It uses regex as its main form of input checking. It 
+whitelists only acceptted characters and any inputs that have blacklisted characters are rejected. The input is discarded and the 
+program assumes as if no input was entered in the first place. This helps protect against buffer overflow type attacks which rely on 
+using an input to overwrite into the instruction pointer of the stack.
+
 After logging in, the program acts according to whether the account is designated as either a teacher or a student since there are 
 different functions which accompany the different user permissions. A teacher account can manage classes and enroll students and mark
 their grades in the respective classes. A student can login and and check for a list of enrolled classes and check their grades in each 
