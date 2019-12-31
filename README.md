@@ -7,6 +7,9 @@ on this github.
 My projects will be separated by category. Under each section, it will contain a general overview of each project, such as 
 its intended goal/purpose and some other specifics as well, programming language, and other skills.
 
+Within each repository will contain its own read me and this also serves to demonstrate my documentation ability. I've included visual
+aids in each readme as well.
+
 ### Data Science 
 The Data science repository will contain 2 (two) projects, Baltimore Crime Map, and League of Legends Matchups. These projects
 were written in python and they utilize the numpy and pandas libraries from python. These projects are intended to demonstrate
