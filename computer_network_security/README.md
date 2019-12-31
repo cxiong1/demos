@@ -13,6 +13,8 @@ The overall goal of this project was to construct a program that takes in user i
 The program follows a shell type architecture, where upon execution, it prompts the user for input. It continously asks for input until
 the program forced closed or if the user exits the program themselves.
 
+![gradebook program control flow](https://github.com/cxiong1/demos/blob/master/computer_network_security/gradebookdiagram.jpg)
+
 There are two types of users for this program, teachers and students. These permissions are designated at the time of account creation.
 A new account can only be created by an administrator. This event occurs at the start of execution, before it prompts the user for their 
 login information, it prompts login or signup. If the user enters 'signup' into the console, the program then asks for 'credentials'. 
