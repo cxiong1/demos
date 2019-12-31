@@ -17,6 +17,8 @@ The program takes input in the form of two images. As stated the program works o
  230. This can be imagined by a black pixel and white pixel. While this is a simplified overview, it highlights the basic premise of
  corner  matching.
  
+ ![corner identification](https://github.com/cxiong1/demos/blob/master/computer_vision/readmeimgs/panorama_corner_identify.png)
+ 
  ### Matching corners.
  
  You can match a corner in one image to another corner in another image. The premise behind this process is that the surrounding pixels 
@@ -24,6 +26,8 @@ The program takes input in the form of two images. As stated the program works o
  corner and attempt to match it with all the other windows that you have identified in the next image. The pixel values might not be 
  one to one but you can select the corner with the best match. In our program, we accomplish this by taking the difference again. 
  We subtract the pixel values and we select the corner window with the lowest difference in intensity.
+ 
+ ![corner matching](https://github.com/cxiong1/demos/blob/master/computer_vision/readmeimgs/panorama_corner_match.png)
  
  ### Estimating and Applying Homography
  
@@ -43,6 +47,8 @@ The program takes input in the form of two images. As stated the program works o
  
  ### Final result
  
- For a more visual result, you can check the bottom of the **report.pdf**. It lists several images that have been stitched together using
- the above method and program. The separated images can be found in the /test_images/ and /train_images/ folders. The input folder serves as the input for the 
+ ![final overlay](https://github.com/cxiong1/demos/blob/master/computer_vision/readmeimgs/panorama_final_overlay.png)
+ 
+ For more examples, you can check the bottom of the **report.pdf**. It lists several images that have been stitched together using
+ the above method and program and also a more indepth explanation of the process itself The separated images can be found in the /test_images/ and /train_images/ folders. The input folder serves as the input for the 
  program, i.e. the two images placed in the input folder will be stitched together.
