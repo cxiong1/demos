@@ -14,3 +14,25 @@ executable itself in the assets section of the release
 
 Upon first launching the application you should be greeted with a screen that looks like this
 ![start screen](readmeimgs/start.png)
+
+The application is split up into 4 sections.
+
+1. Utility and tile manipulation - This section allows the user to easily set all the tiles 
+on the board to the corresponding tile. There are also two preset buttons which give an example
+layout on the board.
+
+2. Tile Grid - This grid of buttons all the user to manually designate the cost and feature
+of each tile. The user can use left click and right click the cycle forwards and backwards
+to a specific tile he wants. 
+
+The cycling will go in the order of Start -> Road -> Grass -> Mountain -> River -> Goal
+
+The the loop is circular so you can transition between Goal -> Start and in the reverse
+as well if you right click from Start back to Goal
+
+3. Display Area - After he user has clicked the run button in section 4, the display area
+will update with a graphical interface showing the optimal path from the designated starting 
+point and the designated goal point. 
+
+4. Run button - This buttons executes the A Star Logic and updates 3. Display Area to show 
+an optimal path from the start and goal point
