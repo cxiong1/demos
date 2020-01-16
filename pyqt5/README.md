@@ -12,7 +12,10 @@ executable itself in the assets section of the release
 
 ## Tutorial and user guide
 
-Upon first launching the application you should be greeted with a screen that looks like this
+Upon first launching the application you should be greeted with a screen that looks like this.
+The screen has been marked with 4 numbers and their respective purpose will be 
+explained below.
+
 ![start screen](readmeimgs/start.png)
 
 The application is split up into 4 sections.
