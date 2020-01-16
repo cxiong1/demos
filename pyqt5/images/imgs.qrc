@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="imgs">
+    <file>grass.jpg</file>
+    <file>goal.png</file>
+    <file>mountain.png</file>
+    <file>road.jpg</file>
+    <file>start.jpg</file>
+    <file>water.jpg</file>
+  </qresource>
+</RCC>
