@@ -30,7 +30,7 @@ The cycling will go in the order of Start -> Road -> Grass -> Mountain -> River 
 The the loop is circular so you can transition between Goal -> Start and in the reverse
 as well if you right click from Start back to Goal
 
-3. Display Area - After he user has clicked the run button in section 4, the display area
+3. Display Area - After the user has clicked the run button in section 4, the display area
 will update with a graphical interface showing the optimal path from the designated starting 
 point and the designated goal point. 
 
