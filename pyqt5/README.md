@@ -50,7 +50,7 @@ By clicking the Road Layout button in 1. Utility, we can load in a preset layout
 
 ![road layout](readmeimgs/roadlayout.png)
 
-After we are comfortable with the state of the board, we can continue and click the Run button in. By doing so,
+After the board has been configured into our desired state, we can continue and click the Run button in. By doing so,
 we tell the program to start calculating the optimal path from the start point and goal point. Notice that the optimal path 
 is not always the shortest in term of number of tiles traversed. Because each tile has a cost associated, some times 
 it may be more advantageous to take a longer path that consists of tiles with a lower cost. However, in this example,
