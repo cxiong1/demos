@@ -54,7 +54,8 @@ it may be more advantageous to take a longer path that consists of tiles with a 
 the optimal path is also the shortest path available.
 
 Below is what the screen should look like after the Run button has been clicked. 3 Display Area should update with
-graphics that display the optimal path.
+graphics that display the optimal path. Green tiles means that is the suggested path. All other tiles which are irrelevant
+to the path are marked as Red
 
 ![road executed](readmeimgs/roadexecuted.png)
 
