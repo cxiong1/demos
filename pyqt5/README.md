@@ -36,3 +36,25 @@ point and the designated goal point.
 
 4. Run button - This buttons executes the A Star Logic and updates 3. Display Area to show 
 an optimal path from the start and goal point
+
+### Road Layout Example
+
+As an example, we will use the road layout preset and have the application perform an A Star
+pathfind on it.
+
+By clicking the Road Layout button in 1. Utility, we can load in a preset layout. Notice how the board in 
+2. Tile Grid updates. 
+
+![road layout](readmeimgs/roadlayout.png)
+
+After we are comfortable with the state of the board, we can continue and click the Run button in. By doing so,
+we tell the program to start calculating the optimal path from the start point and goal point. Notice that the optimal path 
+is not always the shortest in term of number of tiles traversed. Because each tile has a cost associated, some times 
+it may be more advantageous to take a longer path that consists of tiles with a lower cost. However, in this example,
+the optimal path is also the shortest path available.
+
+Below is what the screen should look like after the Run button has been clicked. 3 Display Area should update with
+graphics that display the optimal path.
+
+![road executed](readmeimgs/roadexecuted.png)
+
