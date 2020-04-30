@@ -6,8 +6,7 @@ These are the Baltimore Crime Map and League of Legends Matchups. Both of the pr
 
 For ease of access, I have utilized github's html preview and appended my files so you can visit them directly.
 
-#### Please note, I utilized a tool called nbconvert which automatically converts .ipynb files to .html. I want to clarify that these html files are not indicative of my html/css/javascript skills.
-
+#### Please note, I utilized a tool ,nbconvert, which converts .ipynb (python notebook) files to .html. 
 ### Baltimore Crime Map
 https://htmlpreview.github.io/?https://github.com/cxiong1/demos/blob/master/data_science/Baltimore_Crime_Map.html
 
