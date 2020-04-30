@@ -8,6 +8,22 @@ The relevant files are found through the /buildit-21-master/build filepath.
 
 The overall goal of this project was to construct a program that takes in user input but to ensure that it was impenetrable to attacks such as buffer overflows. 
 
+## Program functionality
+There are 3 main types of accounts that are recognized by the system: `admin`, `teacher`, `student`. Depending on login, the program will
+branch off and handle specific commands from the command line.
+
+`admin`:   
+  -create other accounts for teacher and students
+  
+`teacher`:  
+  -create classes  
+  -add students to classes  
+  -assign grades/marks to students  
+ 
+`student`:  
+  -check list of enrolled classes  
+  -checck current grade in each class  
+
 ## Program execution
 
 The program follows a shell type architecture, where upon execution, it prompts the user for input. It continously asks for input until
@@ -22,19 +38,18 @@ This is a 32 character string stored in a textfile which only administrators sho
 exists on startup. If the file exists, it retrieves the credential key, if it doesn't, it randomly generates the 32 characters and 
 writes it to the textfile.
 
-It follows standard username/password storing practices, comparing if supplied passwords
-matches the stored one in the "database". In this instance, all of the storage done by the program is stored to textfiles locally on the 
-hard drive. 
+## Program auxilliary functionality
 
-Much of the validity checking and sanitization of inputs occurs in 'utils.c' It uses regex as its main form of input checking. It 
+Username and passwords are stored as plaintext in a local textfile. Login is accomplished by comparing if supplied passwords
+matches the stored one in the "database". 
+
+This program writes and reads data to and from a textfile so that upon execution it can continue from the same state where it left off, 
+i.e. it keeps track of all the grades and classes that a teacher might have created and modified from the last session.
+
+## Program security
+
+Much of the validity checking and sanitization of inputs occurs in 'utils.c' It uses `regex` as its main form of input checking. It 
 whitelists only acceptted characters and any inputs that have blacklisted characters are rejected. The input is discarded and the 
 program assumes as if no input was entered in the first place. This helps protect against buffer overflow type attacks which rely on 
 using an input to overwrite into the instruction pointer of the stack.
 
-After logging in, the program acts according to whether the account is designated as either a teacher or a student since there are 
-different functions which accompany the different user permissions. A teacher account can manage classes and enroll students and mark
-their grades in the respective classes. A student can login and and check for a list of enrolled classes and check their grades in each 
-class that they are enrolled in.
-
-This program writes and reads data to and from a textfile so that upon execution it can continue from the same state where it left off, 
-i.e. it keeps track of all the grades and classes that a teacher might have created and modified from the last session.
