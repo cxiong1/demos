@@ -22,7 +22,7 @@ branch off and handle specific commands from the command line.
  
 `student`:  
   -check list of enrolled classes  
-  -checck current grade in each class  
+  -check current grade in each class  
 
 ## Program execution
 
