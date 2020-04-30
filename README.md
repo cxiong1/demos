@@ -30,8 +30,8 @@ through the mapping. The end result is a composited image which contains both of
 **Examples can be found in the /computer_vision/report.pdf file**
 
 ### PYQT5
-The PYQT5 repository contains a fully working windows application. It is meant to demonstrate a basic understanding of a windows python
+The PYQT5 repository contains a python windows application. It is meant to demonstrate a basic understanding of a windows python
 application. The user interface was built using the PyQt5 framework. The purpose of this application is to create a basic A* pathfinding
-application. A* is a intelligent search algorithm which determines the shortest path between two nodes in a graph. This application
+application. A* is a informed search algorithm which determines the shortest path between two nodes in a graph. This application
 allows the user to setup a simple grid based graph and run the A* search algorithm on it. The end result will return a graphical 
 representation of the shortest path the program can find.
