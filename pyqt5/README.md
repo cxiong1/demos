@@ -1,4 +1,4 @@
-# A Star Pathfinder Application
+# A* Pathfinder Application
 
 This directory houses the source code for an A Star Pathfinding application. It will briefly go 
 over,where to get it, how to use the application, and the logic behind the A Star algorithm.
