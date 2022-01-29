@@ -1,6 +1,6 @@
 # A* Pathfinder Application
 
-This directory houses the source code for an A Star Pathfinding application. It will briefly go 
+This directory houses the source code for an A* Pathfinding application. It will briefly go 
 over,where to get it, how to use the application, and the logic behind the A* algorithm.
 
 
@@ -37,12 +37,12 @@ as well if you right click from Start back to Goal
 will update with a graphical interface showing the optimal path from the designated starting 
 point and the designated goal point. 
 
-4. Run button - This buttons executes the A Star Logic and updates 3. Display Area to show 
+4. Run button - This buttons executes the A* Logic and updates 3. Display Area to show 
 an optimal path from the start and goal point
 
 ### Road Layout Example
 
-As an example, we will use the road layout preset and have the application perform an A Star
+As an example, we will use the road layout preset and have the application perform an A*
 pathfind on it.
 
 By clicking the Road Layout button in 1. Utility, we can load in a preset layout. Notice how the board in 
